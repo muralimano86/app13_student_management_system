@@ -41,8 +41,7 @@ class AgeCalculator(QWidget):
         current_year = datetime.now().year
         date_of_birth = self.date_birth_line_edit.text()
         year_of_birth = datetime.strptime(date_of_birth, "%m/%d/%Y").date().year
-        print(year_of_birth)
-        age = current_year - 1986
+        age = current_year - year_of_birth
         self.disp_age_label.setText(f"{self.name_line_edit.text()} is {age} years old")
 
 
